@@ -7,16 +7,17 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-legion = { git = "https://github.com/katharostech/legion.git", branch = "ktech-updates", features = ["blanket-impl-comp"] }
-nalgebra = "*"
-rayon = "*"
+nalgebra = { version = "0.18.1", features = ["serde-serialize", "mint"] }
+rayon = "1.1.0"
+rand = "0.7"
 
 specs-hierarchy = "0.5.1"
-amethyst_core = { git = "https://github.com/amethyst/amethyst", features = ["nightly"] }
+#amethyst_core = { git = "https://github.com/jaynus/amethyst.git", branch = "legion", features = ["legion-ecs", "nightly"] }
+amethyst_core = { path = "../amethyst/amethyst_core", features = ["legion-ecs", "nightly"] }
 
 # Profiling
 flame = { git = "https://github.com/TyOverby/flame.git" }
-flamer = "*"
+flamer = "0.4"
 
 # Logging
 slog = { version = "2.4", features = ["max_level_trace", "release_max_level_info", "nested-values"] }
