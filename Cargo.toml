@@ -12,8 +12,8 @@ rayon = "1.1.0"
 rand = "0.7"
 
 specs-hierarchy = "0.5.1"
-#amethyst_core = { git = "https://github.com/jaynus/amethyst.git", branch = "legion", features = ["legion-ecs", "nightly"] }
-amethyst_core = { path = "../amethyst/amethyst_core", features = ["legion-ecs", "nightly"] }
+amethyst_core = { git = "https://github.com/jaynus/amethyst.git", branch = "legion", features = ["legion-ecs", "nightly"] }
+#amethyst_core = { path = "../amethyst/amethyst_core", features = ["legion-ecs", "nightly"] }
 
 # Profiling
 flame = { git = "https://github.com/TyOverby/flame.git" }
